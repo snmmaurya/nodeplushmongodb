@@ -1,0 +1,40 @@
+npm init -y
+
+npm i typescript --save
+npm i @types/node --save
+
+npx tsc --init
+
+npm i express --save
+npm i @types/express --save
+
+npm i cors --save
+npm i --save-dev @types/cors
+
+npm i mongoose --save
+npm i @types/mongoose --save-dev
+
+
+npm i bcrypt --save
+npm i @types/bcrypt --save-dev
+
+
+npm i jsonwebtoken --save
+npm i @types/jsonwebtoken --save-dev
+
+npm i redis --save
+npm i @types/redis --save-dev
+
+npm i moment --save
+
+
+npm i express-session --save
+
+npm i --save-dev @types/express-session
+
+
+npm i cors --save
+npm i --save-dev @types/cors
+
+npm i cookie-parser --save
+npm i --save-dev @types/cookie-parser
