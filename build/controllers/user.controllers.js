@@ -8,16 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
-const connectDatabase = () => __awaiter(void 0, void 0, void 0, function* () {
-    mongoose_1.default.connect(process.env.DATABASE_CONNECTION_URL, {}).then(() => {
-        console.log('Database connection success');
-    }).catch((e) => {
-        console.log('Database connection failed: ' + e.message);
-    });
+exports.getUsers = void 0;
+const getUsers = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    res.status(200).json({ message: 'Yay its working' });
 });
-exports.default = { connectDatabase };
+exports.getUsers = getUsers;

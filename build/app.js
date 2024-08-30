@@ -19,11 +19,14 @@ app.use(crossDomain_1.default);
 const PORT = process.env.PORT || 3003;
 // Health
 app.get('/', (req, res) => {
-    res.set('Access-Control-Allow-Origin', '*');
     res.status(200).json({ message: 'Server is healthy' });
 });
 // Database
+const database_1 = __importDefault(require("./configs/database"));
+database_1.default.connectDatabase();
 // Routes
+const user_routes_1 = __importDefault(require("./routes/user.routes"));
+app.use('/api/v1/users', user_routes_1.default);
 // Server
 app.listen(PORT, () => {
     console.log("Server started on PORT: " + PORT);
